@@ -37,14 +37,16 @@ html {
     }
 }
 .ce_text.text_absolute_button:not(.has_inside), .ce_text.text_absolute_button > .inside { 
-    overflow: hidden;
+    overflow: hidden; position: relative;
+    &:hover {
+        img { transform: scale(1.02); }
+        .text span { margin-bottom: 0; }
+    }
     figure {
         img { width: 100%; height: 100%; object-fit: cover; transition: all 0.25s ease-in-out; }
-        a:hover img { transform: scale(1.02); }
     }
-    .text { position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;
+    .text { position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; pointer-events: none;
         a, span { display: inline-block; width: 100%; }
-        a:hover span { margin-bottom: 0; }
         span { padding: 20px 20px 30px; margin-bottom: -10px; transition: all 0.25s ease-in-out; }
         h1, h2, h3, h4, h5, h6 { margin: 0; }
     }
