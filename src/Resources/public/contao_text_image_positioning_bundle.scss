@@ -6,7 +6,7 @@ html {
 	@media(max-width:1023px){ --text_image_margin: 20px; }
 }
 
-.ce_text.text_in_center_of_image:not(.has_inside), .ce_text.text_in_center_of_image .inside { 
+.ce_text.text_in_center_of_image:not(.has_inside), .ce_text.text_in_center_of_image > .inside { 
     display: flex; justify-content: space-between; align-items: center; 
     @media(max-width:1023px){ display: block; }
 	& > * { 
@@ -25,7 +25,7 @@ html {
         @media(max-width:1023px){ flex-shrink: 0; } 
     }
 }
-.ce_text.full_width_text_image_teaser:not(.has_inside), .ce_text.full_width_text_image_teaser .inside {
+.ce_text.full_width_text_image_teaser:not(.has_inside), .ce_text.full_width_text_image_teaser > .inside {
     display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; padding: 0; overflow-y: hidden;
     figure { position: absolute; width: 50%; height: 100%; left: 0;
         &.float_right { left: auto; right: 0; }
@@ -36,7 +36,7 @@ html {
         &.float_right_text .inside { padding: var(--text_image_margin, 60px); padding-left: var(--document_content_margin); margin-left: 0; margin-right: 50%; }
     }
 }
-.ce_text.text_absolute_button:not(.has_inside), .ce_text.text_absolute_button .inside {
+.ce_text.text_absolute_button:not(.has_inside), .ce_text.text_absolute_button > .inside {
     figure {
         img { width: 100%; height: 100%; object-fit: cover; }
     }
