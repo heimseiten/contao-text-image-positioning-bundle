@@ -5,3 +5,4 @@ $GLOBALS['TL_LANG']['textImagePositioning']['fullWidhElementTextBesideCroppedIma
 $GLOBALS['TL_LANG']['textImagePositioning']['textAbsoluteAtImageBottom'] = 'Text unten auf dem Bild positionieren';
 
 $GLOBALS['TL_LANG']['tl_content']['textImagePositioning'] = array ( 'Bild/Text Positionierung', '' );
+$GLOBALS['TL_LANG']['tl_content']['centerImage'] = array ( 'Bild mittig positionieren', '' );
