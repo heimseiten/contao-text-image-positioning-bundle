@@ -6,6 +6,11 @@ html {
 	@media(max-width:1023px){ --text_image_margin: 20px; }
 }
 
+
+.ce_text.center_image .image_container { text-align: center; 
+    img { display: inline-block; } 
+}
+
 .ce_text.text_in_center_of_image:not(.has_inside), .ce_text.text_in_center_of_image > .inside { 
     display: flex; justify-content: space-between; align-items: center; 
     @media(max-width:1023px){ display: block; }
