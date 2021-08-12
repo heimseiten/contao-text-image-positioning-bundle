@@ -34,6 +34,9 @@ class HooksListener
         if ( $object->centerImage == '1') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 center_image"', $buffer, 1);
         }        
+        if ( $object->centerHeadline == '1') {
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 center_headline"', $buffer, 1);
+        }    
         
         return $buffer;
     }

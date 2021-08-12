@@ -19,6 +19,12 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['centerImage'] = [
     'eval'      => array('tl_class' => 'w50 m12'),
     'sql'       => "char(1) NOT NULL default ''" 
 ];
+$GLOBALS['TL_DCA']['tl_content']['fields']['centerHeadline'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['centerHeadline'],
+    'inputType' => 'checkbox', 
+    'eval'      => array('tl_class' => 'w50 m12'),
+    'sql'       => "char(1) NOT NULL default ''" 
+];
 
 $GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = function()
 {
@@ -31,6 +37,14 @@ $GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = function()
                 ->addField('centerImage', 'fullsize')
                 ->addField('textImagePositioning', 'fullsize')
                 ->applyToSubpalette('addImage', 'tl_content');
+
+                PaletteManipulator::create()
+                ->addField('centerHeadline', 'type_legend', PaletteManipulator::POSITION_APPEND)
+                ->applyToPalette('text', 'tl_content');
+                
+                PaletteManipulator::create()
+                ->addField('centerHeadline', 'type_legend', PaletteManipulator::POSITION_APPEND)
+                ->applyToPalette('headline', 'tl_content');
             } else {
             }
         }
