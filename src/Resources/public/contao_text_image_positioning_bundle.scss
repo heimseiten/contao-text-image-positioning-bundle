@@ -6,11 +6,6 @@ html {
 	@media(max-width:1023px){ --text_image_margin: 20px; }
 }
 
-
-.ce_text.center_image .image_container { text-align: center; 
-    img { display: inline-block; } 
-}
-
 .ce_text.text_in_center_of_image:not(.has_inside), .ce_text.text_in_center_of_image > .inside { 
     display: flex; justify-content: space-between; align-items: center; 
     @media(max-width:1023px){ display: block; }
@@ -32,13 +27,20 @@ html {
 }
 .ce_text.full_width_text_image_teaser:not(.has_inside), .ce_text.full_width_text_image_teaser > .inside {
     display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; padding: 0; overflow-y: hidden;
-    figure { position: absolute; width: 50%; height: 100%; left: 0;
+    @media(max-width:767px){ display: block; }
+    figure { position: absolute; width: 50%; height: 100%; left: 0; float: none;
+        @media(max-width:767px){ position: relative; width: 100%; height: auto; }
         &.float_right { left: auto; right: 0; }
         img { width: 100%; height: 100%; object-fit: cover; }
+        figcaption { display: none; }
     }
-    .text { width: var(--article_inside_width, 100%); margin: auto;
-        .inside { padding: var(--text_image_margin, 60px); padding-right: var(--document_content_margin); margin-left: 50%; }
-        &.float_right_text .inside { padding: var(--text_image_margin, 60px); padding-left: var(--document_content_margin); margin-left: 0; margin-right: 50%; }
+    .text { width: var(--article_inside_width, 100%); max-width: 100%; margin: auto; float: none;
+        .inside { padding: var(--text_image_margin, 60px); padding-right: var(--document_content_margin); margin-left: 50%; 
+            @media(max-width:767px){ margin-left: auto; }
+        }
+        &.float_right_text .inside { padding: var(--text_image_margin, 60px); padding-left: var(--document_content_margin); margin-left: 0; margin-right: 50%; 
+            @media(max-width:767px){ margin-right: auto; }
+        }
     }
 }
 .ce_text.text_absolute_button:not(.has_inside), .ce_text.text_absolute_button > .inside { 
