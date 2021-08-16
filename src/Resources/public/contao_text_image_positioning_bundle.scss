@@ -58,7 +58,9 @@ html {
         h1, h2, h3, h4, h5, h6 { margin: 0; }
     }
 }
-.ce_text.image_as_background figure { position: absolute; height: 100%; object-fit: cover; }
+.ce_text.image_as_background { position: relative;
+    figure { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+}
 
 .ce_text.center_headline { 
     h1, h2, h3, h4, h5, h6 { text-align: center; }
