@@ -30,6 +30,9 @@ class HooksListener
         }
         if ( $object->textImagePositioning == 'textAbsoluteAtImageBottom') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_absolute_button"', $buffer, 1);
+        }   
+        if ( $object->textImagePositioning == 'fullWidthImageBackground') {
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_as_background"', $buffer, 1);
         }        
         if ( $object->centerImage == '1') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 center_image"', $buffer, 1);
