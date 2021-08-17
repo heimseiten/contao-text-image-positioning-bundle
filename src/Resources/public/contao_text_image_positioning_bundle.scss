@@ -53,6 +53,7 @@ html {
         img { width: 100%; height: 100%; object-fit: cover; transition: all 0.25s ease-in-out; }
     }
     .text { position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; pointer-events: none;
+        @media(max-width:1023px){ position: relative; }
         a, span { display: inline-block; width: 100%; }
         span { padding: 20px 20px 30px; margin-bottom: -10px; transition: all 0.25s ease-in-out; }
         h1, h2, h3, h4, h5, h6 { margin: 0; }
