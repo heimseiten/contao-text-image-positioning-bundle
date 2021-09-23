@@ -25,11 +25,11 @@ class HooksListener
         if ( $object->textImagePositioning == 'imageBesideTextCentered') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_in_center_of_image"', $buffer, 1);
         }
-        if ( $object->textImagePositioning == 'fullWidhElementTextBesideCroppedImage') {
-            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 full_width_text_image_teaser"', $buffer, 1);
+        if ( $object->textImagePositioning == 'textBesideCroppedFullWidhImage') {
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_full_width_height_as_text"', $buffer, 1);
         }
-        if ( $object->textImagePositioning == 'textAbsoluteAtImageBottom') {
-            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_absolute_button"', $buffer, 1);
+        if ( $object->textImagePositioning == 'textBesideCroppedImage') {
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_height_as_text"', $buffer, 1);
         }   
         if ( $object->textImagePositioning == 'fullWidthImageBackground') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_as_background"', $buffer, 1);
