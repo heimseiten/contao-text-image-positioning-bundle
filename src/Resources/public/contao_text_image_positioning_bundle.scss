@@ -6,6 +6,11 @@ html {
 	@media(max-width:1023px){ --text_image_margin: 20px; }
 
     --article_inside_width: 1024px;
+
+	--article_space_top: 60px;
+	@media(max-width:1023px){ --article_space_top: 20px; }
+	--article_space_bottom: 60px;
+	@media(max-width:1023px){ --article_space_bottom: 20px; }
 }
 
 .ce_text.text_in_center_of_image:not(.has_inside), .ce_text.text_in_center_of_image > .inside { 
@@ -40,10 +45,10 @@ html {
     }
     .text { width: var(--article_inside_width, 100%); max-width: 100%; margin: auto; float: none;
         .inside { padding: var(--text_image_margin, 60px); padding-right: var(--document_content_margin); margin-left: 50%; 
-            @media(max-width:767px){ margin-left: auto; padding: var(--document_content_margin); }
+            @media(max-width:767px){ margin-left: auto; padding: var(--article_space_top) var(--document_content_margin) var(--article_space_bottom) var(--document_content_margin); }
         }
         &.float_right_text .inside { padding: var(--text_image_margin, 60px); padding-left: var(--document_content_margin); margin-left: 0; margin-right: 50%; 
-            @media(max-width:767px){ margin-right: auto; padding: var(--document_content_margin); }
+            @media(max-width:767px){ margin-right: auto; padding: var(--article_space_top) var(--document_content_margin) var(--article_space_bottom) var(--document_content_margin); }
         }
     }
 }
