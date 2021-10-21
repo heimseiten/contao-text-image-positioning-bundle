@@ -40,10 +40,10 @@ html {
     }
     .text { width: var(--article_inside_width, 100%); max-width: 100%; margin: auto; float: none;
         .inside { padding: var(--text_image_margin, 60px); padding-right: var(--document_content_margin); margin-left: 50%; 
-            @media(max-width:767px){ margin-left: auto; }
+            @media(max-width:767px){ margin-left: auto; padding: var(--document_content_margin); }
         }
         &.float_right_text .inside { padding: var(--text_image_margin, 60px); padding-left: var(--document_content_margin); margin-left: 0; margin-right: 50%; 
-            @media(max-width:767px){ margin-right: auto; }
+            @media(max-width:767px){ margin-right: auto; padding: var(--document_content_margin); }
         }
     }
 }
