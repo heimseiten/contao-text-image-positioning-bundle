@@ -22,7 +22,9 @@ class HooksListener
     {
         if (TL_MODE === 'BE') { return $buffer; }
 
-        $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_div_inside"', $buffer, 1);
+        if ($object->type === 'text') { 
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_div_inside"', $buffer, 1);
+        }
         
         if ( $object->textImagePositioning == 'imageBesideTextCentered') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_in_center_of_image"', $buffer, 1);
