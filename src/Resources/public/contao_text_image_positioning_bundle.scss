@@ -28,7 +28,7 @@ html {
     }
 	.image_container { flex-shrink: 0; float: none !important; 
         &.float_right { order: 2; } 
-                        &.float_above { margin-right: var(--text_image_margin, 60px); } 
+        &.float_above { margin-right: var(--text_image_margin, 60px); } 
         @media(max-width:1023px){ flex-shrink: 0; } 
     }
 }
