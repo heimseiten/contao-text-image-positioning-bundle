@@ -13,6 +13,10 @@ html {
 	@media(max-width:1023px){ --article_space_bottom: 20px; }
 }
 
+.ce_text {
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 { display: none; }
+}
+
 .ce_text.text_in_center_of_image:not(.has_inside), .ce_text.text_in_center_of_image > .inside { 
     display: flex; justify-content: space-between; align-items: center; 
     @media(max-width:1023px){ display: block; }
@@ -35,7 +39,7 @@ html {
 
 .ce_text.image_full_width_height_as_text:not(.has_inside), .ce_text.image_full_width_height_as_text > .inside,
 .ce_text.image_height_as_text:not(.has_inside), .ce_text.image_height_as_text > .inside {
-    display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; padding: 0; overflow-y: hidden; position: relative; margin-left: auto; margin-right: auto;
+    display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; padding: 0; overflow-y: hidden;
     @media(max-width:767px){ display: block; }
     figure { position: absolute; width: 50%; height: 100%; left: 0; float: none;
         @media(max-width:767px){ position: relative; width: 100%; height: auto; }

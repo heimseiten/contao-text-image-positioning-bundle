@@ -3,7 +3,14 @@
 <?php $this->block('content'); ?>
 
   <?php if (!$this->addBefore): ?>
-    <div class="text<?php if ($this->floatClass): ?><?= $this->floatClass; ?>_text<?php endif; ?>"><div class="inside"><?= $this->text ?></div></div>
+    <div class="text<?php if ($this->floatClass): ?><?= $this->floatClass; ?>_text<?php endif; ?>">
+      <div class="inside">
+          <?php if ($this->headline): ?>
+            <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+          <?php endif; ?>
+          <?= $this->text ?>
+      </div>
+    </div>
   <?php endif; ?>
 
   <?php if ($this->addImage): ?>
@@ -11,7 +18,14 @@
   <?php endif; ?>
 
   <?php if ($this->addBefore): ?>
-    <div class="text<?php if ($this->floatClass): ?><?= $this->floatClass; ?>_text<?php endif; ?>"><div class="inside"><?= $this->text ?></div></div>
+    <div class="text<?php if ($this->floatClass): ?><?= $this->floatClass; ?>_text<?php endif; ?>">
+      <div class="inside">
+          <?php if ($this->headline): ?>
+            <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+          <?php endif; ?>
+          <?= $this->text ?>
+      </div>
+    </div>
   <?php endif; ?>
 
 <?php $this->endblock(); ?>
