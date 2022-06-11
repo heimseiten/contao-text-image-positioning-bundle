@@ -8,4 +8,4 @@ $GLOBALS['TL_LANG']['textImagePositioning']['fullWidthImageBackground'] = 'Bild 
 $GLOBALS['TL_LANG']['tl_content']['centerHeadline'] = array ( 'Überschrift zentriert darstellen', '' );
 
 $GLOBALS['TL_LANG']['tl_content']['textImagePositioning'] = array ( 'Bild/Text Positionierung', '' );
-$GLOBALS['TL_LANG']['tl_content']['centerImage'] = array ( 'Bild mittig positionieren', '' );
+$GLOBALS['TL_LANG']['tl_content']['centerImage'] = array ( 'Bild horizontal mittig positionieren', '' );
