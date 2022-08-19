@@ -1,5 +1,8 @@
 <?php
 
-if (TL_MODE == 'FE') {
+use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
+
+if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
     $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotextimagepositioning/contao_text_image_positioning_bundle.scss|static';
 }
