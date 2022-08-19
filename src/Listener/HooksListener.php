@@ -11,6 +11,9 @@ use Contao\Module;
 use Contao\ContentModel;
 use Contao\Widget;
 
+use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
+
 class HooksListener
 {
     public function onGetContentElement(ContentModel $element, string $buffer): string
@@ -20,7 +23,9 @@ class HooksListener
 
     private function processBuffer(string $buffer, $object): string
     {
-        if (TL_MODE === 'BE') { return $buffer; }
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
+            return $buffer; 
+        }
 
         if ($object->type === 'text') { 
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_div_inside"', $buffer, 1);
