@@ -1,7 +1,7 @@
 <?php
 
-$GLOBALS['TL_LANG']['textImagePositioning']['centerImage'] = 'Bild über oder unter dem Text horizontal zentiert darstellen';
-$GLOBALS['TL_LANG']['textImagePositioning']['imageBesideTextCentered'] = 'Bild und Text nebeneinander vertikal zentriet darstellen';
+$GLOBALS['TL_LANG']['textImagePositioning']['centerImage'] = 'Bild über oder unter dem Text horizontal zentriert darstellen';
+$GLOBALS['TL_LANG']['textImagePositioning']['imageBesideTextCentered'] = 'Bild und Text nebeneinander vertikal zentriert darstellen';
 $GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedImage'] = 'Bild bis Elementmitte und an Texthöhe anpassen';
 $GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedFullWidhImage'] = 'Bild bis Elementmitte und in voller Breite an Texthöhe anpassen';
 $GLOBALS['TL_LANG']['textImagePositioning']['fullWidthImageBackground'] = 'Bild im Hintergrund positionieren';
