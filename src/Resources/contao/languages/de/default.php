@@ -10,4 +10,4 @@ $GLOBALS['TL_LANG']['tl_content']['centerHeadline'] = array ( 'Überschrift zent
 
 $GLOBALS['TL_LANG']['tl_content']['textImagePositioning'] = array ( 'Bild- und Textpositionierung', '' );
 
-$GLOBALS['TL_LANG']['tl_content']['imageCssFilter'] = array ( 'CSS-Filter für das Bild', 'Bspw. opacity(.2) grayscale(1) usw. siehe bspw. <a href="https://blog.kulturbanause.de/2015/03/css-filter-effekte/" target="_blank">kulturbanause.de</a>' );
+$GLOBALS['TL_LANG']['tl_content']['imageCssFilter'] = array ( 'CSS-Filter für das Bild verwenden', 'Bspw. opacity(.2) grayscale(1) usw. siehe bspw. <a href="https://blog.kulturbanause.de/2015/03/css-filter-effekte/" target="_blank">kulturbanause.de</a>' );
