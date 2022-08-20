@@ -14,23 +14,16 @@ use Contao\Widget;
 use Contao\System;
 use Symfony\Component\HttpFoundation\Request;
 
-class HooksListener
-{
-    public function onGetContentElement(ContentModel $element, string $buffer): string
-    {
+class HooksListener {
+    public function onGetContentElement(ContentModel $element, string $buffer): string {
         return $this->processBuffer($buffer, $element);
     }
 
-    private function processBuffer(string $buffer, $object): string
-    {
+    private function processBuffer(string $buffer, $object): string {
         if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
             return $buffer; 
         }
 
-        if ($object->type === 'text') { 
-            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_div_inside"', $buffer, 1);
-        }
-        
         if ( $object->textImagePositioning == 'imageBesideTextCentered') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 text_in_center_of_image"', $buffer, 1);
         }
@@ -43,12 +36,13 @@ class HooksListener
         if ( $object->textImagePositioning == 'fullWidthImageBackground') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_as_background"', $buffer, 1);
         }        
-        if ( $object->centerImage == '1') {
-            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 center_image"', $buffer, 1);
+        if ( $object->textImagePositioning == 'centerImage') {
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_horizontal_centered"', $buffer, 1);
         }        
         if ( $object->centerHeadline == '1') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 center_headline"', $buffer, 1);
-        }    
+        }        
+            $buffer = preg_replace('/<img/', '<img style="filter: ' . $object->imageCssFilter . ';"', $buffer, 1);
         
         return $buffer;
     }
