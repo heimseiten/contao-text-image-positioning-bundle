@@ -1,13 +1,15 @@
 document.addEventListener( 'DOMContentLoaded', function () {    
-    document.querySelector('#ctrl_floating td:nth-child(1)').style.transition = "opacity 1s ease-in-out"
-    document.querySelector('#ctrl_floating td:nth-child(2)').style.transition = "opacity 1s ease-in-out"
-    document.querySelector('#ctrl_floating td:nth-child(3)').style.transition = "opacity 1s ease-in-out"
-    document.querySelector('#ctrl_floating td:nth-child(4)').style.transition = "opacity 1s ease-in-out"
-    
-    controlIcons(document.getElementById('ctrl_textImagePositioning').value)    
-    document.getElementById('ctrl_textImagePositioning').addEventListener('change', function handleChange(event) {
-        controlIcons(event.target.value)
-    })
+    if ( document.getElementById('ctrl_textImagePositioning') ) {
+        document.querySelector('#ctrl_floating td:nth-child(1)').style.transition = "opacity 1s ease-in-out"
+        document.querySelector('#ctrl_floating td:nth-child(2)').style.transition = "opacity 1s ease-in-out"
+        document.querySelector('#ctrl_floating td:nth-child(3)').style.transition = "opacity 1s ease-in-out"
+        document.querySelector('#ctrl_floating td:nth-child(4)').style.transition = "opacity 1s ease-in-out"
+        
+        controlIcons(document.getElementById('ctrl_textImagePositioning').value)
+        document.getElementById('ctrl_textImagePositioning').addEventListener('change', function handleChange(event) {
+            controlIcons(event.target.value)
+        })
+    }
 })    
 function controlIcons(selection) {
     switch (selection) {
