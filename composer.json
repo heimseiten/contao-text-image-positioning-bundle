@@ -1,6 +1,6 @@
 {
     "name": "heimseiten/contao-text-image-positioning-bundle",
-    "description": "Fügt Positionierungsoptionen im Textelement hinzu.",
+    "description": "Fügt Positionierungsoptionen im Textelement hinzu. Verfügbare Optionen, siehe: https://github.com/heimseiten/contao-text-image-positioning-bundle",
     "keywords": [
         "flexbox"
     ],
