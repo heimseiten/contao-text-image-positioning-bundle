@@ -6,7 +6,10 @@ $GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedImage'] = 'Bild bi
 $GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedFullWidhImage'] = 'Bild bis Elementmitte und in voller Breite an Texthöhe anpassen';
 $GLOBALS['TL_LANG']['textImagePositioning']['fullWidthImageBackground'] = 'Bild im Hintergrund positionieren';
 
-$GLOBALS['TL_LANG']['tl_content']['centerHeadline'] = array ( 'Überschrift zentrieren', 'Die Überschrift wird horizontal zentriert dargestellt.' );
+$GLOBALS['TL_LANG']['tl_content']['centerHeadline'] = array ( 'Ausrichtung der Überschrift', 'Die Überschrift kann link, rechts oder mittig ausgerichtet werden.' );
+$GLOBALS['TL_LANG']['centerHeadline']['1'] = 'mittig';
+$GLOBALS['TL_LANG']['centerHeadline']['left'] = 'links';
+$GLOBALS['TL_LANG']['centerHeadline']['right'] = 'rechts';
 
 $GLOBALS['TL_LANG']['tl_content']['textImagePositioning'] = array ( 'Bild- und Textpositionierung', '' );
 
