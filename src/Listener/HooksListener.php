@@ -40,9 +40,17 @@ class HooksListener {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_horizontal_centered"', $buffer, 1);
         }        
         if ( $object->centerHeadline == '1') {
-            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 center_headline"', $buffer, 1);
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 headline_center"', $buffer, 1);
         }        
+        if ( $object->centerHeadline == 'left') {
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 headline_left"', $buffer, 1);
+        }        
+        if ( $object->centerHeadline == 'right') {
+            $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 headline_right"', $buffer, 1);
+        }        
+        if ( $object->imageCssFilter ) {
             $buffer = preg_replace('/<img/', '<img style="filter: ' . $object->imageCssFilter . ';"', $buffer, 1);
+        }
         
         return $buffer;
     }
