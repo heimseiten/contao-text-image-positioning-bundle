@@ -96,7 +96,11 @@ html {
     h1, h2, h3, h4, h5, h6 { text-align: center; }
 }
 
-.ce_headline.center_headline { text-align: center; }
+.content-headline {
+    &.headline_left { text-align: left; }
+    &.headline_center { text-align: center; }
+    &.headline_right { text-align: right; }
+}
 
 .content-text.image_horizontal_centered, a.image_horizontal_centered { 
     figure { text-align: center; 
