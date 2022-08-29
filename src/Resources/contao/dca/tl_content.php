@@ -15,9 +15,11 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['textImagePositioning'] = [
 ];
 $GLOBALS['TL_DCA']['tl_content']['fields']['centerHeadline'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_content']['centerHeadline'],
-    'inputType' => 'checkbox', 
-    'eval'      => array('tl_class' => 'w50 m12'),
-    'sql'       => "char(1) NOT NULL default ''" 
+    'inputType' => 'select', 
+    'eval'      => array('tl_class' => 'w50'),
+    'options'   => array('-', 'left' ,'1', 'right'),
+    'reference' => &$GLOBALS['TL_LANG']['centerHeadline'], 
+    'sql'       => "varchar(255) NOT NULL default ''"
 ];
 $GLOBALS['TL_DCA']['tl_content']['fields']['imageCssFilter'] = [
     'label'     => &$GLOBALS['TL_LANG']['tl_content']['BgCssFilter'],
