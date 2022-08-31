@@ -92,8 +92,14 @@ html {
     .rte { position: relative; padding: var(--document_content_margin); }
 }
 
-.content-text.center_headline { 
-    h1, h2, h3, h4, h5, h6 { text-align: center; }
+&.headline_left { 
+    h1, h2, h3, h4, h5, h6 { text-align: left} 
+}
+&.headline_center { 
+    h1, h2, h3, h4, h5, h6 { text-align: center; } 
+}
+&.headline_right { 
+    h1, h2, h3, h4, h5, h6 { text-align: right; } 
 }
 
 .content-headline {
