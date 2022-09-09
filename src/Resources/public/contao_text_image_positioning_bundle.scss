@@ -32,8 +32,8 @@ html {
     &.media--right figure { order: 2; margin: 0 0 0 var(--text_image_margin, 20px); } 
 }
 
-.mod_article .content-text.media--right.text_in_center_of_image:has(h2),
-.mod_article .content-text.media--left.text_in_center_of_image:has(h2) {
+.mod_article .content-text.media--right.text_in_center_of_image:has(> h2),
+.mod_article .content-text.media--left.text_in_center_of_image:has(> h2) {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr; 
@@ -45,7 +45,7 @@ html {
     figure { grid-area: c; }  
     .rte { grid-area: b; align-self: self-start; }
 }
-.mod_article .content-text.media--left.text_in_center_of_image:has(h2) {
+.mod_article .content-text.media--left.text_in_center_of_image:has(> h2) {
     grid-template-areas: 
     "c a"
     "c b"; 
