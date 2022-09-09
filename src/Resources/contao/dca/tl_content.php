@@ -40,6 +40,12 @@ $GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = function() {
                 PaletteManipulator::create()
                 ->addField('centerHeadline', 'type_legend', PaletteManipulator::POSITION_APPEND)
                 ->applyToPalette('text', 'tl_content');
+
+                PaletteManipulator::create()
+                ->addField('centerHeadline', 'type_legend', PaletteManipulator::POSITION_APPEND)
+                ->addField('textImagePositioning', 'fullsize')
+                ->addField('imageCssFilter', 'floating')
+                ->applyToPalette('image', 'tl_content');
                 
                 PaletteManipulator::create()
                 ->addField('centerHeadline', 'type_legend', PaletteManipulator::POSITION_APPEND)
