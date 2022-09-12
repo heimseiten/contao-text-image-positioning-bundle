@@ -29,7 +29,11 @@ html {
 	figure { flex-shrink: 0; float: none !important; 
         @media(max-width:1023px){ flex-shrink: 0; } 
     }
-    &.media--right figure { order: 2; margin: 0 0 0 var(--text_image_margin, 20px); } 
+    &.media--right figure { 
+        order: 2; 
+        margin: 0 0 0 var(--text_image_margin, 20px); 
+        @media(max-width:1023px){ margin-left: 0; margin-right: 0; }
+    }
 }
 
 .mod_article .content-text.media--right.text_in_center_of_image:has(> h2),
