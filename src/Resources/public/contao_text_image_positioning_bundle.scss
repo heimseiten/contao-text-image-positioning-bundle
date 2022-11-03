@@ -36,25 +36,6 @@ html {
     }
 }
 
-.mod_article .content-text.media--right.text_in_center_of_image:has(> h2),
-.mod_article .content-text.media--left.text_in_center_of_image:has(> h2) {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "a c"
-    "b c"; 
-    h2 { grid-area: a; align-self: self-end; }
-    figure { grid-area: c; }  
-    .rte { grid-area: b; align-self: self-start; }
-}
-.mod_article .content-text.media--left.text_in_center_of_image:has(> h2) {
-    grid-template-areas: 
-    "c a"
-    "c b"; 
-}
-
 .mod_article .content-text.image_full_width_height_as_text, 
 .mod_article .content-text.image_height_as_text{
     display: flex; 
