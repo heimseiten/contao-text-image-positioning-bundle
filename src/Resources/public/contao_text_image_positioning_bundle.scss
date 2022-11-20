@@ -83,7 +83,7 @@ html {
         padding-right: var(--document_content_margin); 
         margin-left: 50%; 
         @media(max-width:767px){ 
-            margin-left: auto; 
+            margin-left: auto;
             padding: var(--article_space_top) var(--document_content_margin) var(--article_space_bottom) var(--document_content_margin);
 	    width: 100%;
         }
@@ -97,6 +97,7 @@ html {
             margin-right: 50%; 
             @media(max-width:767px){ 
                 margin-right: auto; 
+		margin-left: auto; 
                 padding: var(--article_space_top) var(--document_content_margin) var(--article_space_bottom) var(--document_content_margin); 
             }
         }
