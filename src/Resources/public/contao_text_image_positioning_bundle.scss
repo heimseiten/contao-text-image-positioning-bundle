@@ -13,7 +13,7 @@ html {
 	@media(max-width:1023px){ --article_space_bottom: 20px; }
 }
 
-.mod_article .content-text.text_in_center_of_image{ 
+ .content-text.text_in_center_of_image{ 
     display: flex; justify-content: space-between; align-items: center; 
     @media(max-width:1023px){ display: block; }
 	& > * { 
@@ -24,6 +24,7 @@ html {
 	.rte { 
         flex-shrink: 1; 
         margin-right: var(--text_image_margin, 20px);
+        @media(max-width:1023px){ margin-right: 0; }
         h1, h2, h3, h4, h5, h6 { 
             &:first-child { margin-top: 0; } 
         }
@@ -35,6 +36,7 @@ html {
         .rte {
             margin-right: unset;
             margin-left: var(--text_image_margin, 20px);
+            @media(max-width:1023px){ margin-left: 0; }
         }
         figure { 
             order: 2; 
@@ -47,8 +49,8 @@ html {
     }
 }
 
-.mod_article .content-text.image_full_width_height_as_text, 
-.mod_article .content-text.image_height_as_text{
+ .content-text.image_full_width_height_as_text, 
+ .content-text.image_height_as_text{
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -100,7 +102,7 @@ html {
     width: var(--article_inside_width); max-width: 100%; 
 }
 
-.mod_article .content-text.image_as_background { 
+ .content-text.image_as_background { 
     position: relative;
     padding: 0;
     figure, img { 
