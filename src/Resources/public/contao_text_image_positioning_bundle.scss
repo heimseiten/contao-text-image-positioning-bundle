@@ -84,7 +84,8 @@ html {
         margin-left: 50%; 
         @media(max-width:767px){ 
             margin-left: auto; 
-            padding: var(--article_space_top) var(--document_content_margin) var(--article_space_bottom) var(--document_content_margin); 
+            padding: var(--article_space_top) var(--document_content_margin) var(--article_space_bottom) var(--document_content_margin);
+	    width: 100%;
         }
     }
     &.media--right {
