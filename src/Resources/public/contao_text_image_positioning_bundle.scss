@@ -23,18 +23,19 @@ html {
     }
 	.rte { 
         flex-shrink: 1; 
-        margin-right: var(--text_image_margin, 20px);
         h1, h2, h3, h4, h5, h6 { 
             &:first-child { margin-top: 0; } 
         }
     }
-	figure { flex-shrink: 0; float: none !important; 
+	figure { 
+        flex-shrink: 0; 
+        float: none !important; 
+        margin: 0 var(--text_image_margin, 20px) 0 0; 
         @media(max-width:1023px){ flex-shrink: 0; } 
     }
     &.media--right {
         .rte {
             margin-right: unset;
-            margin-left: var(--text_image_margin, 20px);
         }
         figure { 
             order: 2; 
