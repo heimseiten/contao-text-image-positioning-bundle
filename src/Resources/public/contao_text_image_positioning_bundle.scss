@@ -37,7 +37,7 @@ html {
         .rte {
             margin-right: unset;
         }
-        figure { 
+        & > figure { 
             order: 2; 
             margin: 0 0 0 var(--text_image_margin, 20px); 
             @media(max-width:1023px){ 
@@ -58,7 +58,7 @@ html {
     padding: 0; 
     overflow-y: hidden;
     @media(max-width:767px){ display: block; }
-    figure { 
+    & > figure { 
         position: absolute; 
         width: 50%; 
         height: 100%; 
@@ -72,7 +72,7 @@ html {
         img { width: 100%; height: 100%; object-fit: cover; }
         //figcaption { display: none; }
     }
-    &.media--right figure { left: auto; right: 0; 
+    &.media--right > figure { left: auto; right: 0; 
         @media(max-width:1023px){ margin-left: 0; }
     }
     .rte { 
@@ -112,13 +112,13 @@ html {
  .content-text.image_as_background { 
     position: relative;
     padding: 0;
-    figure, img { 
+    & > figure, & > figure img { 
         position: absolute; 
         width: 100%; 
         height: 100%; 
         object-fit: cover;
     }
-    &.media--left figure, &.media--right figure { margin: 0; }
+    &.media--left > figure, &.media--right > figure { margin: 0; }
     .rte { position: relative; padding: var(--document_content_margin); }
 }
 
@@ -139,7 +139,7 @@ html {
 }
 
 .content-text.image_horizontal_centered, .content-image.image_horizontal_centered, a.image_horizontal_centered { 
-    figure { text-align: center; 
+    & > figure { text-align: center; 
         img { display: inline-block; } 
     } 
 }
