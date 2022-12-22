@@ -14,7 +14,7 @@ html {
 }
 
  .content-text.text_in_center_of_image{ 
-    display: flex; justify-content: space-between; align-items: center; 
+    display: flex; align-items: center; 
     @media(max-width:1023px){ display: block; }
 	& > * { 
         @media(max-width:1023px){ 
@@ -34,6 +34,7 @@ html {
         @media(max-width:1023px){ flex-shrink: 0; } 
     }
     &.media--right {
+	justify-content: space-between;
         .rte {
             margin-right: unset;
         }
