@@ -13,16 +13,19 @@ html {
 	@media(max-width:1023px){ --article_space_bottom: 20px; }
 }
 
- .content-text.text_in_center_of_image{ 
-    display: flex; align-items: center; 
-    @media(max-width:1023px){ display: block; }
-	& > * { 
-        @media(max-width:1023px){ 
-            &:first-child { margin-bottom: 20px; } 
-        } 
-    }
+ .content-text.text_in_center_of_image { 
+	 display: flex; 
+	 align-items: center; 
+	 justify-content: stretch;
+	 @media(max-width:1023px){ display: block; }
+	 & > * { 
+		 @media(max-width:1023px){ 
+			 &:first-child { margin-bottom: 20px; } 
+		 }
+	}
 	.rte { 
-        flex-shrink: 1; 
+        flex-shrink: 1;
+	flex-grow: 1;
         h1, h2, h3, h4, h5, h6 { 
             &:first-child { margin-top: 0; } 
         }
