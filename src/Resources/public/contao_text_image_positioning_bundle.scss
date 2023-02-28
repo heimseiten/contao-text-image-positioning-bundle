@@ -53,7 +53,7 @@ html {
 }
 
  .content-text.image_full_width_height_as_text, 
- .content-text.image_height_as_text{
+ .content-text.image_height_as_text {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -78,6 +78,10 @@ html {
     }
     &.media--right > figure { left: auto; right: 0; 
         @media(max-width:1023px){ margin-left: 0; }
+    }
+    &.media--second_image {
+        figure:not(.second_image) { width: 25%; right: 25%; }
+        figure.second_image { width: 25%; right: 0%; }
     }
     .rte { 
         width: calc( var(--article_inside_width, 100vw) / 2 );
