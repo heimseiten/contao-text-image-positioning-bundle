@@ -17,12 +17,10 @@ html {
 	 display: flex; 
 	 align-items: center; 
 	 justify-content: stretch;
-	 @media(max-width:1023px){ display: block; }
-	 & > * { 
-		 @media(max-width:1023px){ 
-			 &:first-child { margin-bottom: 20px; } 
-		 }
-	}
+	 @media(max-width:1023px){ 
+		 display: block; 
+		 &.media--right > *:first-child, &.media--left > *:first-child { margin-bottom: 1em; } 
+	 }
 	.rte { 
 		flex-shrink: 1;
 		flex-grow: 1;
