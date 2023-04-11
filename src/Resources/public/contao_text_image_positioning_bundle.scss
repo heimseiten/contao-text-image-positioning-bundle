@@ -114,6 +114,8 @@ html {
 .content-text.image_height_as_text > .inside { 
     width: var(--content_width); max-width: 100%; 
 }
+.content-text.image_height_as_text.media--right figure { padding-right: var(--content_margin, 20px); }
+.content-text.image_height_as_text.media--left figure { padding-left: var(--content_margin, 20px); }
 
  .content-text.image_as_background { 
     position: relative;
