@@ -59,6 +59,8 @@ html {
     height: 100%; 
     padding: 0; 
     overflow-y: hidden;
+    margin-top: 0; 
+    margin-bottom: 0;
     @media(max-width:767px){ display: block; }
     & > figure { 
         position: absolute; 
