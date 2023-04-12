@@ -150,7 +150,7 @@ html {
     &.headline_right { text-align: right; }
 }
 
-.content-text.image_horizontal_centered, .content-image.image_horizontal_centered, a.image_horizontal_centered { 
+.content-text.image_horizontal_centered, .image_horizontal_centered .content-text, .content-image.image_horizontal_centered, a.image_horizontal_centered { 
     & > figure { text-align: center; 
         img { display: inline-block; } 
     } 
