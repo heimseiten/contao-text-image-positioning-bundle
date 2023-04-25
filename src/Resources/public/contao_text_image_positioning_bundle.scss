@@ -52,10 +52,12 @@ html {
 
  .content-text.image_full_width_height_as_text, 
  .content-text.image_height_as_text {
-    &.BildGroß { --image_size_change: -100px; }
-    &.BildSehrGroß { --image_size_change: -200px; }
-    &.BildKlein { --image_size_change: 100px; }
-    &.BildSehrKlein { --image_size_change: 200px; }
+    &.BildGrößeL { --image_size_change: -50px; }
+    &.BildGrößeXL { --image_size_change: -100px; }
+    &.BildGrößeXXL { --image_size_change: -200px; }
+    &.BildGrößeS { --image_size_change: 50px; }
+    &.BildGrößeXS { --image_size_change: 100px; }
+    &.BildGrößeXXS { --image_size_change: 200px; }
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
