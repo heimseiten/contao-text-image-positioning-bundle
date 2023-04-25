@@ -52,6 +52,10 @@ html {
 
  .content-text.image_full_width_height_as_text, 
  .content-text.image_height_as_text {
+    &.BildGroß { --image_size_change: -100px; }
+    &.BildSehrGroß { --image_size_change: -200px; }
+    &.BildKlein { --image_size_change: 100px; }
+    &.BildSehrKlein { --image_size_change: 200px; }
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -64,7 +68,7 @@ html {
     @media(max-width:767px){ display: block; }
     & > figure { 
         position: absolute; 
-        width: 50%; 
+        width: calc( 50% - var(--image_size_change, 0px) );
         height: 100%; 
         left: 0; 
         float: none;
@@ -84,13 +88,13 @@ html {
         figure.second_image { width: 25%; right: 0%; }
     }
     .rte { 
-        width: calc( var(--content_width, 100vw) / 2 );
+        width: calc( ( var(--content_width, 100vw) / 2 ) + var(--image_size_change, 0px) );
+        margin-left: calc( 50% - var(--image_size_change, 0px) );
+        margin-right: 0;
         max-width: 100%; 
-        margin: auto; 
         float: none; 
         padding: var(--image_margin, 60px); 
         padding-right: var(--content_margin); 
-        margin-left: 50%; 
         @media(max-width:767px){ 
             margin-left: auto;
             padding: var(--article_margin) var(--content_margin) var(--article_margin) var(--content_margin);
@@ -100,10 +104,10 @@ html {
     &.media--right {
         justify-content: flex-end;
         .rte { 
+            margin-right: calc( 50% - var(--image_size_change, 0px) );
+            margin-left: 0; 
             padding: var(--image_margin, 60px); 
             padding-left: var(--content_margin); 
-            margin-left: 0; 
-            margin-right: 50%; 
             @media(max-width:767px){ 
                 margin-right: auto; 
 		margin-left: auto; 
