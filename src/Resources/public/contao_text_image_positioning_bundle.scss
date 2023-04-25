@@ -52,12 +52,12 @@ html {
 
  .content-text.image_full_width_height_as_text, 
  .content-text.image_height_as_text {
-    &.BildGrößeL { --image_size_change: -50px; }
-    &.BildGrößeXL { --image_size_change: -100px; }
-    &.BildGrößeXXL { --image_size_change: -200px; }
-    &.BildGrößeS { --image_size_change: 50px; }
-    &.BildGrößeXS { --image_size_change: 100px; }
-    &.BildGrößeXXS { --image_size_change: 200px; }
+    &.BildgrößeL { --image_size_change: -50px; }
+    &.BildgrößeXL { --image_size_change: -100px; }
+    &.BildgrößeXXL { --image_size_change: -200px; }
+    &.BildgrößeS { --image_size_change: 50px; }
+    &.BildgrößeXS { --image_size_change: 100px; }
+    &.BildgrößeXXS { --image_size_change: 200px; }
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
