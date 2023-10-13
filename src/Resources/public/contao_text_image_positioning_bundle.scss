@@ -13,7 +13,12 @@ html {
 	@media(max-width:767px){ --article_margin: 20px; }
 }
 
- .content-text.text_in_center_of_image { 
+ .content-text.text_in_center_of_image {
+	 &:has(& > :is(h1, h2, h3, h4, h5, h6)) {
+		 flex-wrap: wrap;
+		 & > :is(h1, h2, h3, h4, h5, h6) { width: 100%; }
+		 .rte { width: min-content; }
+	 }
 	 display: flex; 
 	 align-items: center; 
 	 justify-content: stretch;
