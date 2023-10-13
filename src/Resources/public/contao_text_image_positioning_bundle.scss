@@ -13,12 +13,12 @@ html {
 	@media(max-width:767px){ --article_margin: 20px; }
 }
 
- .content-text.text_in_center_of_image {
-	 &:has(& > :is(h1, h2, h3, h4, h5, h6)) {
-		 flex-wrap: wrap;
-		 & > :is(h1, h2, h3, h4, h5, h6) { width: 100%; }
-		 .rte { width: min-content; }
-	 }
+.content-text.text_in_center_of_image:has(& > :is(h1, h2, h3, h4, h5, h6)) {
+    flex-wrap: wrap;
+    & > :is(h1, h2, h3, h4, h5, h6) { width: 100%; }
+    .rte { width: min-content; }
+}
+.content-text.text_in_center_of_image {
 	 display: flex; 
 	 align-items: center; 
 	 justify-content: stretch;
@@ -55,8 +55,18 @@ html {
     }
 }
 
- .content-text.image_full_width_height_as_text, 
- .content-text.image_height_as_text {
+.content-text.image_full_width_height_as_text:has(& > :is(h1, h2, h3, h4, h5, h6)),
+.content-text.image_height_as_text:has(& > :is(h1, h2, h3, h4, h5, h6)) {
+    flex-wrap: wrap;
+    & > :is(h1, h2, h3, h4, h5, h6) { 
+        margin: auto; 
+        width: var(--content_width); 
+        padding-left: var(--content_margin);
+        padding-right: var(--content_margin);
+    }
+}
+.content-text.image_full_width_height_as_text, 
+.content-text.image_height_as_text {
     &.BildgrößeL { --image_size_change: -50px; }
     &.BildgrößeXL { --image_size_change: -100px; }
     &.BildgrößeXXL { --image_size_change: -200px; }
