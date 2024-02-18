@@ -8,7 +8,7 @@ use Contao\System;
 $GLOBALS['TL_DCA']['tl_content']['fields']['textImagePositioning'] = [
     'label'     => &$GLOBALS['TL_LANG']['tl_content']['textImagePositioning'],
     'inputType' => 'select',
-    'eval'      => array('tl_class'=>'w50'),
+    'eval'      => array('tl_class'=>'w50 clr'),
     'options'   => array('-', 'centerImage' ,'imageBesideTextCentered', 'textBesideCroppedImage', 'textBesideCroppedFullWidhImage', 'fullWidthImageBackground'),
     'reference' => &$GLOBALS['TL_LANG']['textImagePositioning'], 
     'sql'       => "varchar(255) NOT NULL default ''"
