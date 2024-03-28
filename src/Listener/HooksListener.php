@@ -40,13 +40,13 @@ class HooksListener {
             }        
             if ( $object->textImagePositioning == 'centerImage') {
                 $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 image_horizontal_centered"', $buffer, 1);
-            }      
-            if ( $object->imageCssFilter ) {
-                $buffer = preg_replace('/<img/', '<img style="filter: ' . $object->imageCssFilter . ';"', $buffer, 1);
             }
         
         }
- 
+       
+        if ( $object->imageCssFilter ) {
+            $buffer = preg_replace('/<img/', '<img style="filter: ' . $object->imageCssFilter . ';"', $buffer, 1);
+        }
         if ( $object->centerHeadline == '1') {
             $buffer = preg_replace('/class="([^"]+)"/', 'class="$1 headline_center"', $buffer, 1);
         }        
