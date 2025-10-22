@@ -13,7 +13,7 @@ html {
 	@media(max-width:767px){ --article_margin: 20px; }
 }
 
-.content-text.text_in_center_of_image:has(& > :is(h1, h2, h3, h4, h5, h6)) {
+.content-text.text_in_center_of_image:has( > :is(h1, h2, h3, h4, h5, h6) ) {
     flex-wrap: wrap;
     & > :is(h1, h2, h3, h4, h5, h6) { width: 100%; }
     .rte { width: min-content; }
@@ -55,8 +55,8 @@ html {
     }
 }
 
-.content-text.image_full_width_height_as_text:has(& > :is(h1, h2, h3, h4, h5, h6)),
-.content-text.image_height_as_text:has(& > :is(h1, h2, h3, h4, h5, h6)) {
+.content-text.image_full_width_height_as_text:has( > :is(h1, h2, h3, h4, h5, h6) ),
+.content-text.image_height_as_text:has( > :is(h1, h2, h3, h4, h5, h6) ) {
     flex-wrap: wrap;
     & > :is(h1, h2, h3, h4, h5, h6) { 
         margin: auto; 
@@ -155,13 +155,13 @@ html {
     .rte { position: relative; padding: var(--content_margin); }
 }
 
-&.headline_left { 
+.headline_left { 
     h1, h2, h3, h4, h5, h6 { text-align: left; width: 100%; }
 }
-&.headline_center { 
+.headline_center { 
     h1, h2, h3, h4, h5, h6 { text-align: center; width: 100%; }
 }
-&.headline_right { 
+.headline_right { 
     h1, h2, h3, h4, h5, h6 { text-align: right; width: 100%; }
 }
 
