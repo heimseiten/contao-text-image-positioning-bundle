@@ -7,4 +7,4 @@ if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendReques
     $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/heimseitencontaotextimagepositioning/contao_text_image_positioning_bundle.js|static';
 }
 
-$GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotextimagepositioning/contao_text_image_positioning_bundle.scss|static';
+$GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotextimagepositioning/contao_text_image_positioning_bundle.css|static';
