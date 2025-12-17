@@ -1,10 +1,10 @@
 <?php
 
-$GLOBALS['TL_LANG']['textImagePositioning']['centerImage'] = 'Bild horizontal zentriert darstellen';
-$GLOBALS['TL_LANG']['textImagePositioning']['imageBesideTextCentered'] = 'Bild und Text nebeneinander vertikal zentriert darstellen';
-$GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedImage'] = 'Bild bis Elementmitte und an Texthöhe anpassen';
-$GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedFullWidhImage'] = 'Bild bis Elementmitte und in voller Breite an Texthöhe anpassen';
-$GLOBALS['TL_LANG']['textImagePositioning']['fullWidthImageBackground'] = 'Bild im Hintergrund positionieren';
+$GLOBALS['TL_LANG']['textImagePositioning']['centerImage'] = 'Bild mittig (horizontal)';
+$GLOBALS['TL_LANG']['textImagePositioning']['imageBesideTextCentered'] = 'Text mittig (vertikal)';
+$GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedImage'] = 'Bild bis zur Hälfte';
+$GLOBALS['TL_LANG']['textImagePositioning']['textBesideCroppedFullWidhImage'] = 'Bild bis zum Rand';
+$GLOBALS['TL_LANG']['textImagePositioning']['fullWidthImageBackground'] = 'Bild als Hintergrund';
 
 $GLOBALS['TL_LANG']['tl_content']['centerHeadline'] = array ( 'Ausrichtung der Überschrift', 'Die Überschrift kann link, rechts oder mittig ausgerichtet werden.' );
 $GLOBALS['TL_LANG']['centerHeadline']['1'] = 'mittig';
