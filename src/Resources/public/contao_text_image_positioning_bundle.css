@@ -17,8 +17,8 @@
 		grid-template-columns: 
 			var(--content_margin) 
 			1fr 
-			calc( var(--content_width) / 2 ) 
-			calc( var(--content_width) / 2 ) 
+			calc( var(--content_width) / 2 - var(--content_margin) ) 
+			calc( var(--content_width) / 2 - var(--content_margin) )
 			1fr 
 			var(--content_margin)
 		;
