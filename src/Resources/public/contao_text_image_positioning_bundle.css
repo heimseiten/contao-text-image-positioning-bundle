@@ -5,8 +5,6 @@
     }
     @media(min-width:1024px){
         overflow: hidden;
-        figure { float: none; }
-        & > .rte { padding: var(--article_margin, 20px); }
         padding: 0;
 		width: 100%;
 		display: grid;
@@ -19,6 +17,10 @@
 			1fr 
 			var(--content_margin)
 		;
+        figure { float: none; }
+		&:first-child,
+		&:is(.BildBisZumRand, .BildBisZurHälfte) + :is(.BildBisZumRand, .BildBisZurHälfte) { margin-block-start: 0; }
+        & > .rte { padding: var(--article_margin, 20px); }
 		& > .rte, & > .content-element-group {
 			padding: 0;
 			grid-column: 3 / 4;
