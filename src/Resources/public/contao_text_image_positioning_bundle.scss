@@ -130,13 +130,13 @@ html {
     .rte { position: relative; padding: var(--document_content_margin); }
 }
 
-&.headline_left { 
+.headline_left { 
     h1, h2, h3, h4, h5, h6 { text-align: left; width: 100%; }
 }
-&.headline_center { 
+.headline_center { 
     h1, h2, h3, h4, h5, h6 { text-align: center; width: 100%; }
 }
-&.headline_right { 
+.headline_right { 
     h1, h2, h3, h4, h5, h6 { text-align: right; width: 100%; }
 }
 
